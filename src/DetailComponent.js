@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import "./DetailComponent.css"
+import { Col, Row } from 'react-bootstrap';
 
 function DetailComponent() {
     const { id } = useParams();
@@ -20,8 +21,15 @@ function DetailComponent() {
     return (
         <div className='content'>
             <h2>{movie.original_title}</h2>
-            <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="Movie Poster" />
-            <p>{movie.overview}</p>
+            <Row className='detail'>
+                <Col md={2}>
+                    <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="Movie Poster" />
+                </Col>
+                <Col md={2}>
+                    <h1>Description</h1>
+                    {movie.overview}
+                </Col>
+            </Row>
         </div>
     );
 }
