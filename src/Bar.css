@@ -1,0 +1,11 @@
+.top-bar {
+  background-color: #484aec;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+}
+
+.logo {
+  height: 40px;
+  margin: 30px;
+}

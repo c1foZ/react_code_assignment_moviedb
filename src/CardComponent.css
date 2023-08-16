@@ -1,0 +1,17 @@
+.card {
+  width: 20rem;
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-bottom: 150px;
+  padding: 15px;
+  text-align: center;
+  background-color: aqua;
+}
+
+.card-title.h5 {
+  font-size: 30px;
+}
+
+.col-md-1 {
+  margin-right: 30px;
+}
