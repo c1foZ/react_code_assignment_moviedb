@@ -4,15 +4,15 @@ import "./DetailComponent.css"
 import { Col, Row } from 'react-bootstrap';
 
 function DetailComponent() {
-    const { id } = useParams();
+    const { asset, id } = useParams();
     const [movie, setMovie] = useState(null);
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=4a28dff8e62c17516b7cca46db33367a`)
+        fetch(`https://api.themoviedb.org/3/${asset}/${id}?api_key=4a28dff8e62c17516b7cca46db33367a`)
             .then(response => response.json())
             .then(data => setMovie(data))
             .catch(error => console.error('Error fetching movie details:', error));
-    }, [id]);
+    }, [asset, id]);
 
     if (!movie) {
         return <div>Loading...</div>;

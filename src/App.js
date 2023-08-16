@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeComponent />} />
           <Route path="/about" element={<About />} />
-          <Route path="/movie/:id" element={<DetailComponent />} />
+          <Route path="/:asset/:id" element={<DetailComponent />} />
         </Routes>
       </Router>
     </div>

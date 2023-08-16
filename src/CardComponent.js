@@ -24,7 +24,7 @@ function CardComponent({ asset, type, genreId }) {
             const title = asset === 'tv' ? movies.results[i].original_name : movies.results[i].original_title;
             cards.push(
                 <Col md={1} key={i}>
-                    <Link to={`/movie/${movies.results[i].id}`} style={{ textDecoration: 'none' }}>
+                    <Link to={`/${asset}/${movies.results[i].id}`} style={{ textDecoration: 'none' }}>
                         <Card style={{ height: '73%', cursor: 'pointer' }}>
                             <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500/${movies.results[i].poster_path}`} alt="Card Image" />
                             <Card.Body>
